@@ -1,7 +1,0 @@
-SELECT  COUNT(*)
-FROM `bigquery-public-data.san_francisco.bikeshare_stations` AS bkshare_station
-JOIN `bigquery-public-data.san_francisco.bikeshare_trips` AS bkshare_trips
-  ON bkshare_station.station_id = bkshare_trips.start_station_id
-WHERE bkshare_trips.subscriber_type = "Subscriber"
-AND  bkshare_station.landmark = "Redwood City"
-AND bkshare_trips.start_date BETWEEN '2016-04-01 00:00:00 UTC' AND '2016-06-30 23:59:59 UTC'
